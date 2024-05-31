@@ -1,5 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+.container{
+   width: 1280px;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 99;
+}
+
+.main-head{
+   width: 100%;
+   height: 54px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: transparent;
+   z-index: 9999;
+}
+
+.main-head.slidedown{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: white;
+   animation: slidedown 0.4s forwards;
+}
+
+.main-head .main-menu{
+   width: 100%;
+   height: 54px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-head .main-menu .logo{
+   font-size: 25px;
+   font-family: 'Work Sans', sans-serif;
+   font-weight: 700;
+   color:#fff;
+}
+
+.main-head .main-menu .nav-menu{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main-head .main-menu .nav-menu .nav-list{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-head .main-menu .nav-menu .nav-list .nav-list-item{
+   list-style: none;
+   padding: 15px 30px;
+}
+
+.main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link{
+   display: inline-block;
+   text-decoration: none;
+   font-size: 15px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   color: #fff;
+   transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.main-head.slidedown .main-menu .nav-menu .nav-list .nav-list-item .nav-link{
+   color: #000;
+}
+
+.main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link:hover{
+   color: #B53471;
+}
+
+.showcase{
+   width: 100%;
+   height: 560px;
+   background: url(./images/ghost.webp) no-repeat;
+   background-position: center;
+   background-size: cover;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+
+.showcase .overlay{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.5);
+}
+
+.showcase .content{
+   padding: 0 230px;
+   color: #fff;
+   text-align: center;
+}
+
+.showcase .content h2{
+   font-size: 45px;
+   font-family: 'Work Sans', sans-serif;
+   font-weight: 600;
+   line-height: 55px;
+   color: #fff;
+}
+
+.showcase .content p{
+   font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   line-height: 24px;
+   color: #fff;
+   margin-bottom: 15px;
+}
+
+.showcase .content .btn{
+   display: inline-block;
+   text-decoration: none;
+   padding: 10px 15px;
+   border: 2px solid #B53471;
+   color: #fff;
+   border-radius: 5px;
+   font-size: 15px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   transition: all 0.2s ease-in-out;
+}
+
+.showcase .content .btn:hover{
+   background: #B53471;
+}
+
+.demo-text{
+   width: 100%;
+   height: auto;
+   padding: 80px 0;
+}
+
+.demo-text .demo-content{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+}
+
+.demo-text .demo-content .content{
+   padding: 30px 40px;
+   width: 50%;
+}
+
+.demo-text .demo-content .content h2{
+   font-size: 45px;
+   font-family: 'Work Sans', sans-serif;
+   font-weight: 600;
+   line-height: 55px;
+   color: #000;
+}
+
+.demo-text .demo-content .content p{
+   font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   line-height: 24px;
+   color: #000;
+   margin-bottom: 15px;
+}
+
+.demo-text .demo-content .img{
+   width: 50%;
+}
+
+.demo-text .demo-content .img img{
+   width: 100%;
+}
+
+
+
+@keyframes slidedown{
+   from{
+      top: -54px;
+      opacity: 0;
+   }
+
+   to{
+      top: 0;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+      opacity: 1;
+   }
 }
